@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>sxyth</artifactId>
+        <groupId>com.lnsoft</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lnsoft</groupId>
+    <artifactId>sxyth-gateway</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+        </dependency>
+        <!-- SpringCloud Ailibaba Nacos -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <!-- SpringCloud Ailibaba Nacos Config -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+        <!-- SpringBoot Actuator -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- SpringCloud Netflix Hystrix -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+
+        <!-- Mysql Connector -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!--JPA-->
+        <!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>-->
+
+        <!-- mybatis Plus 插件-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+        <!--验证码 -->
+        <dependency>
+            <groupId>com.github.penggle</groupId>
+            <artifactId>kaptcha</artifactId>
+        </dependency>
+
+      
+        <dependency>
+            <groupId>com.lnsoft</groupId>
+            <artifactId>sxyth-common-hibernate</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+      
+
+      
+      
+        <dependency>
+            <groupId>com.lnsoft</groupId>
+            <artifactId>sxyth-common-annotation</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/sxyth-common-annotation-1.0.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.lnsoft</groupId>
+            <artifactId>sxyth-common-core</artifactId>
+              <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/sxyth-common-core-1.0.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.lnsoft</groupId>
+            <artifactId>sxyth-common-auth</artifactId>
+              <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/sxyth-common-auth-1.0.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.lnsoft</groupId>
+            <artifactId>sxyth-common-log</artifactId>
+              <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/sxyth-common-log-1.0.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.lnsoft</groupId>
+            <artifactId>sxyth-common-redis</artifactId>
+              <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/sxyth-common-redis-1.0.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.lnsoft</groupId>
+            <artifactId>sxyth-api-system</artifactId>
+              <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/sxyth-api-system-1.0.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>eu.bitwalker</groupId>
+            <artifactId>UserAgentUtils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-openfeign-core</artifactId>
+            <version>2.2.2.RELEASE</version>
+        </dependency>
+
+        <!-- SpringCloud Openfeign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <!--redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+
+
+        <!--  &lt;!&ndash;安全模块&ndash;&gt;
+          <dependency>
+              <groupId>com.lnsoft</groupId>
+              <artifactId>sxyth-common-sercurity</artifactId>
+              <version>${sxyth.version}</version>
+          </dependency>-->
+
+
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+        </dependency>
+
+
+        <!-- Swagger -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${swagger.fox.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${swagger.fox.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+
+        <!--google工具包-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+
+        <!--log4j-->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+            <version>1.4.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+
+
+        <!--isc 相关依赖 start-->
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>com.sgcc.uap.bcprov</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/com.sgcc.uap.bcprov-jdk16-1.46.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>com.sgcc.uap.core.rest</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/com.sgcc.uap.core.rest-1.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>com.sgcc.uap.exception</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/com.sgcc.uap.exception-1.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>com.sgcc.uap.mdd.runtime</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/com.sgcc.uap.mdd.runtime-1.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>com.sgcc.uap.mdd.validator</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/com.sgcc.uap.mdd.validator-1.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>com.sgcc.uap.SGSM</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/com.sgcc.uap.SGSM.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>com.sgcc.uap.utils</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/com.sgcc.uap.utils-1.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>isc_sm_agent</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/isc_sm_agent.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>isc_sso_agent</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/isc_sso_agent.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/jackson-annotations-2.12.1.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/jackson-core-2.12.1.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>jackson-core-asl</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/jackson-core-asl-1.9.5.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>jackson-core-lgpl</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/jackson-core-lgpl-1.9.6.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/jackson-databind-2.12.1.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>jackson-dataformat-cbor</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/jackson-dataformat-cbor-2.7.5.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/jackson-mapper-asl-1.9.5.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>jackson-mapper-lgpl</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/jackson-mapper-lgpl-1.9.6.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>jackson-module-afterburner</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/jackson-module-afterburner-2.7.5.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>jackson-module-hibernate</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/jackson-module-hibernate-1.9.1.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.lnsoft.isc</groupId>
+            <artifactId>lsp_commons-util</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/lsp_commons-util-0.0.1.jar</systemPath>
+        </dependency>
+
+
+        <!--isc 相关依赖 end-->
+        <!--jackson start-->
+
+        <!--数据绑定依赖于下面两个包-->
+        <!--<dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.4</version>
+        </dependency>
+        &lt;!&ndash;注解包&ndash;&gt;
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.9.4</version>
+        </dependency>
+        &lt;!&ndash;核心包&ndash;&gt;
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.9.4</version>
+        </dependency>-->
+        <!--jackson end-->
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+            <!--本地jar引入-->
+            <resource>
+                <directory>lib</directory>
+                <targetPath>BOOT-INF/lib/</targetPath>
+                <includes>
+                    <include>**/*.jar</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+</project>
